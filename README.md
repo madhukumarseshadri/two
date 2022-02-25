@@ -13,6 +13,6 @@ c) two-css.js - where css style are categorized under place, position,background
 
 That's about what we are using to create applications at this point on the client end. 
 
-On the server end, we have more exciting things check out madhukumarseshadri/talkweb3
+On the server end, I have more exciting things check out madhukumarseshadri/talkweb3
 
 I think evolution of CSS need to be managed via namespaces for category of styles place, position,background, size,cursor namespaces as it will be lot more easy to manage them as they grow.
