@@ -1,0 +1,44 @@
+#! /bin/bash
+
+echo "+ ascertaining webroot .. oops .. can't do .. "
+echo "- please open the script and update webroot var"
+webroot=/usr/local/apache2/htdocs
+module=two
+moduleroot=$webroot/$module
+
+if test -e $moduleroot; then
+	echo "+ removing $moduleroot - shall I?"
+	read input
+	if test $input = "y"; then
+		echo "- ok removing $moduleroot"
+		rm $moduleroot
+	else
+		exit 1
+	fi
+fi
+
+echo "+ checking for $moduleroot under $webroot"
+if test -d $moduleroot; then
+	echo "- $moduleroot exists .. proceeding .. "
+else
+	echo "- creating $moduleroot "
+	mkdir $moduleroot
+fi
+
+#write file names and directories that need to be copied to webroot
+echo "+ ok .. deploying .. "
+what=(*.js images)
+for a in ${what[*]}; do
+	if test -f $a; then
+		echo "- cp $a $moduleroot"
+		cp $a $moduleroot/
+	elif test -d $a; then
+		echo "- cp -r $a $moduleroot"
+		cp -r $a $moduleroot
+	else
+		echo "- oops .. not sure what is $a"
+	fi
+done
+
+echo "+ finally, listing what was deployed .. "
+ls -al $moduleroot/

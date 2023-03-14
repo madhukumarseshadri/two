@@ -1,0 +1,19 @@
+#! /bin/bash
+
+what=(two.js two-com.js two-css.js two-event.js two-parse.js two-ui.js two-ui-input.js two-ui-box.js two-ui-table.js two-ui-htmlcells.js)
+rm two1.js
+for a in ${what[*]}; do 
+	cat $a >> two1.js		
+done
+
+webroot=/usr/local/nginx/html
+module=two
+moduleroot=$webroot/$module
+
+mkdir $moduleroot
+
+cp ./two1.js $moduleroot/
+
+echo "+ finally, listing what was deployed .. "
+ls $moduleroot
+ 
