@@ -4,10 +4,20 @@ Creator - Madhukumar Seshadri
 License - See license file
 Purpose - begin javascript client objects
 
-a) two.js - globals
-b) two-com.js - a wrapper around XMLHttpRequest (AJAX) to communicate with the mother ship, web server
-c) two-css.js - where css style are categorized under place, position,background, size,cursor namespaces ... you essentially place with border and manage display within place namespace, size.setwidth and so on.
+Edited on Sept 6th 2013 - by none other than Madhukumar Seshadri
+Edited on Feb 18th 2023 - by none other than Madhukumar Seshadri
+Edited on Mar 14th 2023 - by none other than Madhukumar Seshadri
 
-Then, I saw jquery (https://jquery.com), started using it. 
+1. two.js 
+2. two.parse.js
+3. two.com.js - a wrapper around XMLHttpRequest (AJAX) to communicate with the mother ship, web server
+4. two.css.js -  where css style are categorized under place, position,background, size,cursor namespaces ... you essentially place with border and manage display within place namespace, size.setwidth and so on.
+5. two.ui.js 
+  - two.ui.link.js
+  - two.ui.button.js
+  - two.ui.input.js
+  - two.ui.form.js
+  - two.ui.table.js
+  - two.ui.row.js
 
-On the server end, I have more exciting things check out talkweb3.
+Then, I saw jquery (https://jquery.com), started using it. We can always work on this to. If you are interested, contribute.
